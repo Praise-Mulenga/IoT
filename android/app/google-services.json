@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "457793809758",
+    "project_id": "enviromental-monitor-ad43d",
+    "storage_bucket": "enviromental-monitor-ad43d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:457793809758:android:6ea42dc96e8a9776b973cf",
+        "android_client_info": {
+          "package_name": "com.example.environmental_monitor_dashboard"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAaeVjQ_08tThofNvT4i3KbfdxcG8UVVmc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

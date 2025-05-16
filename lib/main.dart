@@ -1,29 +1,24 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'sensors/sensor_screen.dart';
+import 'sensors/sensor_screen.dart'; // This already contains the navigation
 
-void main() async {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   
   try {
-    // Initialize Firebase with your credentials
     await Firebase.initializeApp(
       options: const FirebaseOptions(
         apiKey: "AIzaSyCnDaQNTEvpAcdSKYj00e9qUMNrh_5Rj-k",
         authDomain: "enviromental-monitor-ad43d.firebaseapp.com",
-        //databaseURL: "https://homehunt-53202-default-rtdb.firebaseio.com", // Note: This doesn't match project ID
+        databaseURL: "https://enviromental-monitor-ad43d-default-rtdb.firebaseio.com",
         projectId: "enviromental-monitor-ad43d",
-        storageBucket: "enviromental-monitor-ad43d.firebasestorage.app",
+        storageBucket: "enviromental-monitor-ad43d.appspot.com",
         messagingSenderId: "457793809758",
         appId: "1:457793809758:web:56d81c47a1a04833b973cf",
         measurementId: "G-M17G5G5954"
       ),
     );
-
-    /* Sign in anonymously
-    await FirebaseAuth.instance.signInAnonymously();
-    print('Anonymous user signed in: ${FirebaseAuth.instance.currentUser?.uid}'); */
-    
+    print('Firebase initialized successfully');
   } catch (e) {
     print('Firebase initialization error: $e');
   }
@@ -42,8 +37,14 @@ class SensorApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
+        scaffoldBackgroundColor: Colors.grey[900],
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.grey[900],
+          elevation: 0,
+          centerTitle: true,
+        ),
       ),
-      home: const SensorScreen(),
+      home: const SensorScreen(), // This is your existing screen with navigation
     );
   }
 }
